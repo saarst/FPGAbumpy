@@ -1,0 +1,197 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "offsetX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetX[10]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[9]",
+					"strict" : false
+				},
+				{
+					"name" : "offsetY[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Tile_type[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "resetN",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[10]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

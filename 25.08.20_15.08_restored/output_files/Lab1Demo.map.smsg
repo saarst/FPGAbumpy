@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at game_controller.sv(24): always construct contains both blocking and non-blocking assignments File: C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/RTL/VGA/game_controller.sv Line: 24
+Info (10281): Verilog HDL Declaration information at square_object.sv(18): object "tile" differs only in case from object "Tile" in the same scope File: C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/RTL/VGA/square_object.sv Line: 18

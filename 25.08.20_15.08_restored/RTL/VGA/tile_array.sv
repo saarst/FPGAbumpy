@@ -8,7 +8,7 @@ module	tile_array	(
 					input 	logic	[2:0] Ynum,
 					output   logic [1:0] Tile_Type
 			);		
-bit [0:1] [0:7] [0:7] tile_bitmap  = {
+bit [0:7] [0:7] [0:1] tile_bitmap  = {
 
 
 {2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,

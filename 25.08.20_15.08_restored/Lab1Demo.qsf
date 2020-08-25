@@ -480,7 +480,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/back_ground_drawSquare.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyface_moveCollision.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/game_controller.sv
@@ -512,5 +511,7 @@ set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name QIP_FILE numberPos.qip
 set_global_assignment -name BDF_FILE RTL/VGA/top_project_demo.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/tile_array.sv
-set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
