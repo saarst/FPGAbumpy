@@ -7,9 +7,9 @@ module	game_controller	(
 			input		logic	clk,
 			input		logic	resetN,
 			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-			input	logic	drawing_request_Ball,
-			input	logic	drawing_request_1,
-			input logic drawing_request_2,
+			input	logic	drawing_request_Ball, //bumpy
+			input	logic	drawing_request_1, //tile
+			input logic drawing_request_2, //gift?
 		
 			
 			output logic collision, // active in case of collision between two objects

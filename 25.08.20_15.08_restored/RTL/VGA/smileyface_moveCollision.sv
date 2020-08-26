@@ -28,13 +28,14 @@ module	smileyface_moveCollision	(
 
 // a module used to generate the  ball trajectory.  
 
+parameter int ZERO = 0;
 parameter int INITIAL_X = 100;
 parameter int INITIAL_Y = 100;
 parameter int INITIAL_X_SPEED = 0;
 parameter int INITIAL_Y_SPEED = 0;
 parameter int Y_ACCEL = -10;
 parameter int sideSpeedX = 80/30;
-parameter int sideSpeedY = 5/30;
+parameter int jumpSpeedY = 5/30;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to work with integers in high resolution 
@@ -56,21 +57,31 @@ begin
 	if(!resetN)
 		Xspeed	<= INITIAL_X_SPEED;
 	else 	begin
-			if(right) Xspeed	<= sideSpeedX;
 			
+			if(Xspeed == ZERO && Yspeed == ZERO) begin 
+			if((left + right + jump) < 2) //less than 2 buttons pressed at the same time
+			begin
+					if(right) Xspeed	<= sideSpeedX;
+					if(left) Xspeed	<= -sideSpeedX;
+					if(jump) Yspeed	<= jumpSpeedY;
+		
+			end
+			
+			
+			end
 			// colision Calcultaion 
 			
-//hit bit map has one bit per edge:  hit_colors[3:0] =   {Left, Top, Right, Bottom}	
+//hit bit map has one bit per edge:  hit_colors[3:0] =   {Left(3), Top(2), Right(1), Bottom(0)}	
 //there is one bit per edge, in the corner two bits are set  
+			if(collision) begin
+				if(HitEdgeCode [0] == 1) begin Yspeed <= ZERO; Xspeed <= ZERO; end //Bottom
+				//if(HitEdgeCode [1] == 1) Xspeed <= -Xspeed ; //Right
+				//if(HitEdgeCode [2] == 1) Xspeed <= -Xspeed ; //Top
+				if(HitEdgeCode [3] == 1) Yspeed <= -Yspeed ; //Left	
+				
+		end
 
-
-		if (collision && HitEdgeCode [3] == 1 )   // hit left border of brick  
-				if (Xspeed < 0) // while moving right
-						Xspeed <= -Xspeed ; 
-			
-			if (collision && HitEdgeCode [1] == 1 )   // hit right border of brick  
-				if (Xspeed > 0 ) //  while moving left
-					Xspeed <= -Xspeed ; 
+		 
 			
 				
 	end

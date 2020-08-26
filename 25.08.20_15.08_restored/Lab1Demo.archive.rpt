@@ -1,0 +1,153 @@
+Archive Project report for Lab1Demo
+Wed Aug 26 14:57:15 2020
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Wed Aug 26 14:57:15 2020 ;
+; Revision Name          ; Lab1Demo                              ;
+; Top-level Entity Name  ; top_project_demo                      ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Excluding 'Automatically detected source files' The Quartus Prime software may not be able to automatically locate all project files.
+Info: Parsing: RTL/VGA/back_ground_drawSquare.sv
+Info: Parsing: RTL/VGA/smileyface_moveCollision.sv
+Info: Parsing: RTL/VGA/game_controller.sv
+Info: Parsing: RTL/VGA/objects_mux_all.sv
+Info: Parsing: RTL/VGA/square_object.sv
+Info: Parsing: RTL/VGA/smileyBitMap.sv
+Info: Parsing: RTL/VGA/objects_mux.sv
+Info: Parsing: RTL/VGA/VGA_Controller.sv
+Info: Parsing: RTL/VGA/NumbersBitMap.sv
+Info: Parsing: RTL/MSS/ToneDecoder.sv
+Info: Parsing: RTL/MSS/TOP_MSS_DEMO.bdf
+Info: Parsing: RTL/MSS/SinTable.sv
+Info: Parsing: RTL/MSS/prescaler.sv
+Info: Parsing: RTL/MSS/data_conversion.sv
+Info: Parsing: RTL/MSS/addr_counter.sv
+Info: Parsing: RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf
+Info: Parsing: RTL/KEYBOARD/random.sv
+Info: Parsing: RTL/KEYBOARD/keyToggle_decoder.sv
+Info: Parsing: RTL/KEYBOARD/keyPad_decoder.sv
+Info: Parsing: RTL/Seg7/SEG7.SV
+Info: Parsing: RTL/VGA/valX.v
+Info: Parsing: RTL/VGA/valX_inst.v
+Info: Parsing: RTL/VGA/valX_bb.v
+Info: Parsing: RTL/numberPosition.v
+Info: Parsing: RTL/numberPosition_bb.v
+Info: Parsing: RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf
+Info: Parsing: numberPos.v
+Info: Parsing: numberPos_bb.v
+Info: Parsing: RTL/VGA/top_project_demo.bdf
+Info: Parsing: RTL/VGA/tile_array.sv
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Projects/Lab1A/project/25.08.20_15.08_restored/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'Lab1Demo.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4736 megabytes
+    Info: Processing ended: Wed Aug 26 14:57:15 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++-------------------------------------------------------+
+; Files Archived                                        ;
++-------------------------------------------------------+
+; File Name                                             ;
++-------------------------------------------------------+
+; assignment_defaults.qdf                               ;
+; constraints/DE10_Standard_Audio.sdc                   ;
+; constraints/pin.tcl                                   ;
+; db/stp1_auto_stripped.stp                             ;
+; DE10_Standard_Audio.sdc                               ;
+; Lab1Demo.qpf                                          ;
+; Lab1Demo.qsf                                          ;
+; numberPos.bsf                                         ;
+; numberPos.qip                                         ;
+; numberPos.v                                           ;
+; numberPos_bb.v                                        ;
+; output_files/Chain1.cdf                               ;
+; output_files/stp1.stp                                 ;
+; RTL/audio_codec_controller/audio_codec_controller.qxp ;
+; RTL/KEYBOARD/keyPad_decoder.sv                        ;
+; RTL/KEYBOARD/keyToggle_decoder.sv                     ;
+; RTL/KEYBOARD/random.sv                                ;
+; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                      ;
+; RTL/MSS/addr_counter.sv                               ;
+; RTL/MSS/data_conversion.sv                            ;
+; RTL/MSS/prescaler.sv                                  ;
+; RTL/MSS/SinTable.sv                                   ;
+; RTL/MSS/ToneDecoder.sv                                ;
+; RTL/MSS/TOP_MSS_DEMO.bdf                              ;
+; RTL/numberPosition.bsf                                ;
+; RTL/numberPosition.qip                                ;
+; RTL/numberPosition.v                                  ;
+; RTL/numberPosition_bb.v                               ;
+; RTL/Seg7/SEG7.SV                                      ;
+; RTL/VGA/back_ground_drawSquare.sv                     ;
+; RTL/VGA/game_controller.sv                            ;
+; RTL/VGA/NumbersBitMap.sv                              ;
+; RTL/VGA/objects_mux.sv                                ;
+; RTL/VGA/objects_mux_all.sv                            ;
+; RTL/VGA/smileyBitMap.sv                               ;
+; RTL/VGA/smileyface_moveCollision.sv                   ;
+; RTL/VGA/square_object.sv                              ;
+; RTL/VGA/tile_array.sv                                 ;
+; RTL/VGA/top_project_demo.bdf                          ;
+; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                 ;
+; RTL/VGA/valX.bsf                                      ;
+; RTL/VGA/valX.qip                                      ;
+; RTL/VGA/valX.v                                        ;
+; RTL/VGA/valX_bb.v                                     ;
+; RTL/VGA/valX_inst.v                                   ;
+; RTL/VGA/VGA_Controller.sv                             ;
+; Waveform.vwf                                          ;
++-------------------------------------------------------+
+
+

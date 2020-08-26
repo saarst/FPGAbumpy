@@ -1,0 +1,70 @@
+Quartus Prime Archive log --	C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qarlog
+
+Archive:	C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qar
+Date:		Wed Aug 26 14:57:15 2020
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/DE10_Standard_Audio.sdc
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qpf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qsf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/KEYBOARD/keyPad_decoder.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/KEYBOARD/keyToggle_decoder.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/KEYBOARD/random.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/SinTable.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/TOP_MSS_DEMO.bdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/ToneDecoder.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/addr_counter.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/data_conversion.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/MSS/prescaler.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/Seg7/SEG7.SV
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/NumbersBitMap.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/VGA_Controller.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/back_ground_drawSquare.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/game_controller.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/objects_mux.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/objects_mux_all.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/smileyBitMap.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/smileyface_moveCollision.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/square_object.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/tile_array.sv
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/top_project_demo.bdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/valX.bsf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/valX.qip
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/valX.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/valX_bb.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/VGA/valX_inst.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/audio_codec_controller/audio_codec_controller.qxp
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/numberPosition.bsf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/numberPosition.qip
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/numberPosition.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/RTL/numberPosition_bb.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/Waveform.vwf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/assignment_defaults.qdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/constraints/DE10_Standard_Audio.sdc
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/constraints/pin.tcl
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/db/stp1_auto_stripped.stp
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/numberPos.bsf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/numberPos.qip
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/numberPos.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/numberPos_bb.v
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/output_files/Chain1.cdf
+C:/Projects/Lab1A/project/25.08.20_15.08_restored/output_files/stp1.stp
+	======= Total: 47 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Aug 26 15:46:55 2020
+Source archive file:	C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo.qar
+Archive was extracted into	C:/Projects/Lab1A/project/25.08.20_15.08_restored/Lab1Demo_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Wed Aug 26 16:40:03 2020
+Source archive file:	C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/Lab1Demo.qar
+Archive was extracted into	C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/Lab1Demo_restored/
+		 - successfully.

@@ -4,191 +4,123 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "offsetX[0]",
+					"name" : "VGA_VS",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[1]",
+					"name" : "VGA_HS",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[2]",
+					"name" : "VGA_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[3]",
+					"name" : "VGA_BLANK_N",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[4]",
+					"name" : "VGA_B[7]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[5]",
+					"name" : "VGA_B[6]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[6]",
+					"name" : "VGA_B[5]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[7]",
+					"name" : "VGA_B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[8]",
+					"name" : "VGA_B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[9]",
+					"name" : "VGA_B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetX[10]",
+					"name" : "VGA_B[1]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[0]",
+					"name" : "VGA_B[0]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[1]",
+					"name" : "VGA_G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[2]",
+					"name" : "VGA_G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[3]",
+					"name" : "VGA_G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[4]",
+					"name" : "VGA_G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[5]",
+					"name" : "VGA_G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[6]",
+					"name" : "VGA_G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[7]",
+					"name" : "VGA_G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[8]",
+					"name" : "VGA_G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[9]",
+					"name" : "VGA_R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "offsetY[10]",
+					"name" : "VGA_R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Tile_type[0]",
+					"name" : "VGA_R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "pixelX[0]",
+					"name" : "VGA_R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
 					"name" : "resetN",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[1]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[2]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[3]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[0]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[1]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[2]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[4]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[5]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[6]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[7]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[8]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[9]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelX[10]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[4]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[5]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[6]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[7]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[8]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[9]",
-					"strict" : false
-				},
-				{
-					"name" : "pixelY[10]",
 					"strict" : false
 				}
 			]
