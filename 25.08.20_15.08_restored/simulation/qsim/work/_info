@@ -8,29 +8,73 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/simulation/qsim
+vsmileyface_moveCollision
+Z1 !s110 1598547280
+!i10b 1
+!s100 [cFT:5JiOM0JIMLh0fDc:1
+IbbQk[:HU]=ZdT>n^YV2E73
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1598547278
+Z3 8Lab1Demo.vo
+Z4 FLab1Demo.vo
+Z5 L0 32
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1598547279.000000
+Z7 !s107 Lab1Demo.vo|
+Z8 !s90 -work|work|Lab1Demo.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+nsmileyface_move@collision
+vsmileyface_moveCollision_vlg_vec_tst
+R1
+!i10b 1
+!s100 W98TBOcGe`?eCDL2z:`JW0
+Imhjbb^VabJWmX4LPlfH]X1
+R2
+R0
+w1598547277
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+!s108 1598547280.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R9
+R10
+nsmileyface_move@collision_vlg_vec_tst
 vsquare_object
-Z1 !s110 1598363070
+Z12 !s110 1598363070
 !i10b 1
 !s100 6J7EFWD47Bh67Voh@g2I93
 IRL0@=TAE;]03QZb4zb3Km1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+R2
 R0
 w1598363069
-8Lab1Demo.vo
-FLab1Demo.vo
-L0 32
-Z3 OV;L;10.5b;63
+R3
+R4
+R5
+R6
 r1
 !s85 0
 31
 !s108 1598363069.000000
-!s107 Lab1Demo.vo|
-!s90 -work|work|Lab1Demo.vo|
+R7
+R8
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+R9
+R10
 vsquare_object_vlg_vec_tst
-R1
+R12
 !i10b 1
 !s100 dDNVd76YT4NCWJ8QzRdCV2
 Iz7^^b=H4D6O[ce1TlN7GV2
@@ -39,8 +83,8 @@ R0
 w1598363067
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
-L0 30
-R3
+R11
+R6
 r1
 !s85 0
 31
@@ -48,5 +92,5 @@ r1
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
-R4
-R5
+R9
+R10

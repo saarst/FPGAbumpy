@@ -39,11 +39,12 @@ begin
 	else begin
 	
 	// defaults 
-		greenBits <= 3'b110 ; 
-		redBits <= 3'b010 ;
+		greenBits <= 3'b001 ; 
+		redBits <= DARK_COLOR;//3'b001 ;
 		blueBits <= LIGHT_COLOR;
 		boardersDrawReq <= 	1'b0 ; 
 
+	/*
 					
 	// draw the yellow borders 
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
@@ -76,7 +77,7 @@ begin
 							
 		if (pixelX <  300 && pixelY < 200 )   
 					blueBits <= 2'b10  ; 
-	
+	*/
 	end; 	
 end 
 endmodule

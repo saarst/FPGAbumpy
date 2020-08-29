@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Wed Aug 26 16:46:25 2020
+Sat Aug 29 19:27:51 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Wed Aug 26 16:46:25 2020 ;
+; Restore Archived Project Status ; Successful - Sat Aug 29 19:27:51 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
 ; Top-level Entity Name           ; top_project_demo                      ;
 ; Family                          ; Cyclone V                             ;
@@ -47,12 +47,12 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_26_08_20_16_31.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_29_08_20_19_21.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Wed Aug 26 16:46:25 2020
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Sat Aug 29 19:27:51 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -69,6 +69,8 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                      ;
 ; RTL/KEYBOARD/keyPad_decoder.sv                        ;
 ; RTL/KEYBOARD/keyToggle_decoder.sv                     ;
+; RTL/KEYBOARD/key_FallingEdge.sv                       ;
+; RTL/KEYBOARD/key_risingEdge.sv                        ;
 ; RTL/KEYBOARD/random.sv                                ;
 ; RTL/MSS/SinTable.sv                                   ;
 ; RTL/MSS/TOP_MSS_DEMO.bdf                              ;
@@ -103,17 +105,24 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/numberPosition_bb.v                               ;
 ; Waveform.vwf                                          ;
 ; Waveform1.vwf                                         ;
+; Waveform2.vwf                                         ;
 ; assignment_defaults.qdf                               ;
 ; constraints/DE10_Standard_Audio.sdc                   ;
 ; constraints/pin.tcl                                   ;
 ; db/Lab1Demo.cmp.rdb                                   ;
 ; db/stp1_auto_stripped.stp                             ;
+; key_FallingEdge.vwf                                   ;
+; key_risingEdge.vwf                                    ;
+; keys_not_working_smiley.vwf                           ;
 ; numberPos.bsf                                         ;
 ; numberPos.qip                                         ;
 ; numberPos.v                                           ;
 ; numberPos_bb.v                                        ;
 ; output_files/Chain1.cdf                               ;
 ; output_files/stp1.stp                                 ;
+; tile_array.vwf                                        ;
+; tile_object.vwf                                       ;
+; tilemap.vwf                                           ;
 +-------------------------------------------------------+
 
 

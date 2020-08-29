@@ -14,9 +14,9 @@ module	smileyface_moveCollision	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input	logic	right, //on rise 
-					input	logic	left, 	
-					input	logic	jump,
+					input	logic	rightN, //on rise 
+					input	logic	leftN, 	
+					input	logic	jumpN,
 					input logic collision,  //collision if smiley hits an object
 					input	logic	[3:0] HitEdgeCode, //one bit per edge 
 
@@ -28,95 +28,91 @@ module	smileyface_moveCollision	(
 
 // a module used to generate the  ball trajectory.  
 
-parameter int ZERO = 0;
-parameter int INITIAL_X = 100;
-parameter int INITIAL_Y = 100;
+localparam logic ZERO = 0;
+parameter int INITIAL_X = 40;
+parameter int INITIAL_Y = 428;
 parameter int INITIAL_X_SPEED = 0;
 parameter int INITIAL_Y_SPEED = 0;
-parameter int Y_ACCEL = -10;
-parameter int sideSpeedX = 80/30;
-parameter int jumpSpeedY = 5/30;
+parameter int Y_ACCEL = -1;
+parameter int sideSpeedX = 2;
+parameter int jumpSpeedY = 10;
+logic flag,newFlag;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to work with integers in high resolution 
 // we do all calulations with topLeftX_FixedPoint  so we get a resulytion inthe calcuatuions of 1/64 pixel 
 // we devide at the end by FIXED_POINT_MULTIPLIER which must be 2^n 
-const int	x_FRAME_SIZE	=	639 * FIXED_POINT_MULTIPLIER; // note it must be 2^n 
-const int	y_FRAME_SIZE	=	479 * FIXED_POINT_MULTIPLIER;
+//const int	x_FRAME_SIZE	=	639 * FIXED_POINT_MULTIPLIER; // note it must be 2^n 
+//const int	y_FRAME_SIZE	=	479 * FIXED_POINT_MULTIPLIER;
 
 
-int Xspeed, topLeftX_FixedPoint; // local parameters 
-int Yspeed, topLeftY_FixedPoint;
+int Xspeed, topLeftX_FixedPoint,XnxtSpeed,XnxtSpeedNew; // local parameters 
+int Yspeed, topLeftY_FixedPoint,YnxtSpeed,YnxtSpeedNew;
 
 
 //////////--------------------------------------------------------------------------------------------------------------=
-//  calculation x Axis speed 
+//  calculation x & y Axis speeds 
 
 always_ff@(posedge clk or negedge resetN)
 begin
-	if(!resetN)
+	if(!resetN) begin
 		Xspeed	<= INITIAL_X_SPEED;
-	else 	begin
-			
-			if(Xspeed == ZERO && Yspeed == ZERO) begin 
-			if((left + right + jump) < 2) //less than 2 buttons pressed at the same time
-			begin
-					if(right) Xspeed	<= sideSpeedX;
-					if(left) Xspeed	<= -sideSpeedX;
-					if(jump) Yspeed	<= jumpSpeedY;
+		Yspeed	<= INITIAL_Y_SPEED;
+		XnxtSpeed <=INITIAL_X_SPEED;
+		YnxtSpeed	<= INITIAL_Y_SPEED;
+		flag     <= 1'b0;
 		
-			end
-			
-			
-			end
-			// colision Calcultaion 
-			
-//hit bit map has one bit per edge:  hit_colors[3:0] =   {Left(3), Top(2), Right(1), Bottom(0)}	
-//there is one bit per edge, in the corner two bits are set  
-			if(collision) begin
-				if(HitEdgeCode [0] == 1) begin Yspeed <= ZERO; Xspeed <= ZERO; end //Bottom
-				//if(HitEdgeCode [1] == 1) Xspeed <= -Xspeed ; //Right
-				//if(HitEdgeCode [2] == 1) Xspeed <= -Xspeed ; //Top
-				if(HitEdgeCode [3] == 1) Yspeed <= -Yspeed ; //Left	
-				
-		end
-
-		 
-			
-				
+	end
+	
+	else if (startOfFrame) begin
+		Xspeed <= XnxtSpeed;
+		Yspeed <= YnxtSpeed;
+		flag     <= 1'b0;
+	end
+	
+	else if (!flag ) begin
+	XnxtSpeed <= XnxtSpeedNew;
+	YnxtSpeed <= YnxtSpeedNew;
+	flag <=newFlag;
 	end
 end
 
 
-//////////--------------------------------------------------------------------------------------------------------------=
-//  calculation Y Axis speed using gravity
-
-always_ff@(posedge clk or negedge resetN)
-begin
-	if(!resetN) begin 
-		Yspeed	<= INITIAL_Y_SPEED;
-	end 
-	else begin
-		
-		if (startOfFrame == 1'b1) 
-				Yspeed <= Yspeed  - Y_ACCEL ; // deAccelerate : slow the speed down every clock tick 
-			
-					
-	// colision Calcultaion 
-			
-		//hit bit map has  one bit per edge:  Left-Top-Right-Bottom	 
-
+always_comb begin
+		YnxtSpeedNew = Yspeed + Y_ACCEL;
+		XnxtSpeedNew = Xspeed;
+		newFlag = flag;
 	
-		if (collision && HitEdgeCode [2] == 1 )   // hit top border of brick  
-				if (Yspeed < 0) // while moving up
-						Yspeed <= -Yspeed ; 
-			
-			if (collision && HitEdgeCode [0] == 1 )   // hit bottom border of brick  
-				if (Yspeed > 0 ) //  while moving doun
-					Yspeed <= -Yspeed ; 
-		
-
+	if((Xspeed==ZERO) && (Yspeed==ZERO) && (!jumpN)) begin
+					newFlag = 1'b1;
+					YnxtSpeedNew	= jumpSpeedY;
 	end
+	
+	else if ((!rightN) && (Xspeed==ZERO))  begin
+			newFlag = 1'b1;
+			XnxtSpeedNew	= 		Xspeed + sideSpeedX;
+			if (Yspeed==ZERO) 	YnxtSpeedNew	= jumpSpeedY;
+	end
+	
+	else if ((!leftN) && (Xspeed==ZERO)) begin
+			newFlag = 1'b1;
+			XnxtSpeedNew	= Xspeed - sideSpeedX;
+			if (Yspeed==ZERO) 	YnxtSpeedNew	= jumpSpeedY;
+	end
+	
+	else if (collision) begin
+				newFlag = 1'b1;	
+				if(HitEdgeCode[3]) begin //Bottom
+					XnxtSpeedNew = ZERO;
+					YnxtSpeedNew = ZERO;		
+				end 
+				
+				//else if (HitEdgeCode [2])   // hit top border of brick  
+				//if (Yspeed > 0) // while moving up
+					//	YnxtSpeedNew = -Yspeed ; 
+	end 
+	
+		
 end
 
 //////////--------------------------------------------------------------------------------------------------------------=
@@ -129,21 +125,19 @@ begin
 		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
 		topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
 	end
-	else begin
+	
+	
+	else
+	begin
 		
-		if (startOfFrame == 1'b1) begin // perform  position integral only 30 times per second 
-			
-			topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; 
-
+		if (startOfFrame) // perform  position integral only 30 times per second
+		begin  
+			topLeftY_FixedPoint  <= topLeftY_FixedPoint - Yspeed; 
+			topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; 
 			//if (X_direction==1'b0) //  while moving down
-			//	topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; 
 			//else 
-			//	topLeftX_FixedPoint  <= topLeftX_FixedPoint - Xspeed; 
-
-
-
-					
-			end
+			//	topLeftX_FixedPoint  <= topLeftX_FixedPoint - Xspeed; 	
+		end
 	end
 end
 
