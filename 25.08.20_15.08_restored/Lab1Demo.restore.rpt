@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Sat Aug 29 19:27:51 2020
+Sat Aug 29 23:20:18 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Aug 29 19:27:51 2020 ;
+; Restore Archived Project Status ; Successful - Sat Aug 29 23:20:18 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
-; Top-level Entity Name           ; top_project_demo                      ;
+; Top-level Entity Name           ; game_controller                       ;
 ; Family                          ; Cyclone V                             ;
 +---------------------------------+---------------------------------------+
 
@@ -47,13 +47,13 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_29_08_20_19_21.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_29_08_20_23_17.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4740 megabytes
-    Info: Processing ended: Sat Aug 29 19:27:51 2020
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Aug 29 23:20:18 2020
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -106,7 +106,31 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; Waveform.vwf                                          ;
 ; Waveform1.vwf                                         ;
 ; Waveform2.vwf                                         ;
+; a1.bsf                                                ;
+; a1.qip                                                ;
+; a1.v                                                  ;
+; a1_bb.v                                               ;
+; a2.bsf                                                ;
+; a2.qip                                                ;
+; a2.v                                                  ;
+; a2_bb.v                                               ;
+; a3.bsf                                                ;
+; a3.qip                                                ;
+; a3.v                                                  ;
+; a3_bb.v                                               ;
+; a4.bsf                                                ;
+; a4.qip                                                ;
+; a4.v                                                  ;
+; a4_bb.v                                               ;
+; a5.bsf                                                ;
+; a5.qip                                                ;
+; a5.v                                                  ;
+; a5_bb.v                                               ;
 ; assignment_defaults.qdf                               ;
+; const_need.bsf                                        ;
+; const_need.qip                                        ;
+; const_need.v                                          ;
+; const_need_bb.v                                       ;
 ; constraints/DE10_Standard_Audio.sdc                   ;
 ; constraints/pin.tcl                                   ;
 ; db/Lab1Demo.cmp.rdb                                   ;

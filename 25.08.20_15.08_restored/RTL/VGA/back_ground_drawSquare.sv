@@ -18,7 +18,7 @@ module	back_ground_drawSquare	(
 
 const int	xFrameSize	=	639;
 const int	yFrameSize	=	479;
-const int	bracketOffset =	30;
+const int	bracketOffset =	1;
 
 logic [2:0] redBits;
 logic [2:0] greenBits;
@@ -44,15 +44,15 @@ begin
 		blueBits <= LIGHT_COLOR;
 		boardersDrawReq <= 	1'b0 ; 
 
-	/*
-					
+	
+	/*				
 	// draw the yellow borders 
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 
 				redBits <= DARK_COLOR ;	
 				greenBits <= DARK_COLOR ;	
 				blueBits <= LIGHT_COLOR ;	// 3rd bit will be truncked
-			end
+			end*/
 		// draw  four lines with "bracketOffset" offset from the border 
 		
 		if (        pixelX == bracketOffset ||
@@ -60,14 +60,14 @@ begin
 						pixelX == (xFrameSize-bracketOffset) || 
 						pixelY == (yFrameSize-bracketOffset)) 
 			begin 
-					redBits <= DARK_COLOR ;	
-					greenBits <= DARK_COLOR  ;	
-					blueBits <= DARK_COLOR ;
+					//redBits <= DARK_COLOR ;	
+					//greenBits <= DARK_COLOR  ;	
+					//blueBits <= DARK_COLOR ;
 					boardersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
 			end
 	
 	// note numbers can be used inline if they appear only once 
-			
+	/*		
 		if (pixelX > 156 && pixelY >= 256 ) // rectangles on part of the screen 
 					redBits <= DARK_COLOR ; 
 				 

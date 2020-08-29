@@ -17,8 +17,17 @@ module	smileyface_moveCollision	(
 					input	logic	rightN, //on rise 
 					input	logic	leftN, 	
 					input	logic	jumpN,
-					input logic collision,  //collision if smiley hits an object
+					input   logic   collision,  //collision if smiley hits an object
 					input	logic	[3:0] HitEdgeCode, //one bit per edge 
+
+					/*//debugging input
+					input	logic [31:0] Y_ACCEL,
+					input	logic [31:0] sideSpeedX,
+					input	logic [31:0] jumpSpeedYstep,
+					input	logic [31:0] INITIAL_X,
+					input	logic [31:0] INITIAL_Y,*/
+					input logic [31:0] jumpSpeedYUp,
+					
 
 					output	 logic signed 	[10:0]	topLeftX,// output the top left corner 
 					output	 logic signed	[10:0]	topLeftY
@@ -29,13 +38,16 @@ module	smileyface_moveCollision	(
 // a module used to generate the  ball trajectory.  
 
 localparam logic ZERO = 0;
-parameter int INITIAL_X = 40;
-parameter int INITIAL_Y = 428;
+
 parameter int INITIAL_X_SPEED = 0;
 parameter int INITIAL_Y_SPEED = 0;
-parameter int Y_ACCEL = -1;
-parameter int sideSpeedX = 2;
-parameter int jumpSpeedY = 10;
+///*
+parameter int INITIAL_X = 24;
+parameter int INITIAL_Y = 428;
+parameter int Y_ACCEL = 3; 
+parameter int sideSpeedX = 72;
+parameter int jumpSpeedYstep = 100;
+//parameter int jumpSpeedYUp = 200      ; */ 
 logic flag,newFlag;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
@@ -79,37 +91,37 @@ end
 
 
 always_comb begin
-		YnxtSpeedNew = Yspeed + Y_ACCEL;
+		YnxtSpeedNew = Yspeed - Y_ACCEL;
 		XnxtSpeedNew = Xspeed;
 		newFlag = flag;
 	
 	if((Xspeed==ZERO) && (Yspeed==ZERO) && (!jumpN)) begin
 					newFlag = 1'b1;
-					YnxtSpeedNew	= jumpSpeedY;
+					YnxtSpeedNew	= jumpSpeedYUp;
 	end
 	
 	else if ((!rightN) && (Xspeed==ZERO))  begin
 			newFlag = 1'b1;
 			XnxtSpeedNew	= 		Xspeed + sideSpeedX;
-			if (Yspeed==ZERO) 	YnxtSpeedNew	= jumpSpeedY;
+			YnxtSpeedNew	= jumpSpeedYstep;
 	end
 	
 	else if ((!leftN) && (Xspeed==ZERO)) begin
 			newFlag = 1'b1;
 			XnxtSpeedNew	= Xspeed - sideSpeedX;
-			if (Yspeed==ZERO) 	YnxtSpeedNew	= jumpSpeedY;
+			YnxtSpeedNew	= jumpSpeedYstep;
 	end
 	
 	else if (collision) begin
 				newFlag = 1'b1;	
-				if(HitEdgeCode[3]) begin //Bottom
+				if(HitEdgeCode==4'B1001 || HitEdgeCode==4'B0011 ) begin //Bottom
 					XnxtSpeedNew = ZERO;
 					YnxtSpeedNew = ZERO;		
 				end 
 				
-				//else if (HitEdgeCode [2])   // hit top border of brick  
-				//if (Yspeed > 0) // while moving up
-					//	YnxtSpeedNew = -Yspeed ; 
+				else if (HitEdgeCode [2])   // hit top border of brick  
+				if (Yspeed > 0) // while moving up
+						YnxtSpeedNew = -Yspeed ; 
 	end 
 	
 		
