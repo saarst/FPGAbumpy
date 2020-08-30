@@ -91,7 +91,8 @@ end
 
 
 always_comb begin
-		YnxtSpeedNew = Yspeed - Y_ACCEL;
+		if (Yspeed > -176) YnxtSpeedNew = Yspeed - Y_ACCEL;
+		else YnxtSpeedNew = Yspeed;
 		XnxtSpeedNew = Xspeed;
 		newFlag = flag;
 	
@@ -114,7 +115,7 @@ always_comb begin
 	
 	else if (collision) begin
 				newFlag = 1'b1;	
-				if(HitEdgeCode==4'B1001 || HitEdgeCode==4'B0011 ) begin //Bottom
+				if(HitEdgeCode[0]) begin //Bottom
 					XnxtSpeedNew = ZERO;
 					YnxtSpeedNew = ZERO;		
 				end 
