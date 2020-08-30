@@ -57,7 +57,7 @@ begin
 	
 	//floor drawing
 	if (Tile_type!= TILETYPE_BACKGROUND &&
-	(offsetY>50) &&
+	(offsetY>60) &&
 	(offsetY <75) &&
 	(offsetX >10) &&
 	(offsetX < 70)

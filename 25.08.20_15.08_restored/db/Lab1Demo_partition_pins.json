@@ -4,31 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "collision",
+					"name" : "BG_RGB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SingleHitPulse",
+					"name" : "BG_RGB[1]",
 					"strict" : false
 				},
 				{
-					"name" : "endgame",
+					"name" : "BG_RGB[3]",
 					"strict" : false
 				},
 				{
-					"name" : "victory",
+					"name" : "BG_RGB[4]",
 					"strict" : false
 				},
 				{
-					"name" : "drawing_request_Ball",
-					"strict" : false
-				},
-				{
-					"name" : "drawing_request_tile",
-					"strict" : false
-				},
-				{
-					"name" : "startOfFrame",
+					"name" : "boardersDrawReq",
 					"strict" : false
 				},
 				{
@@ -40,11 +32,83 @@
 					"strict" : false
 				},
 				{
-					"name" : "TileType[0]",
+					"name" : "pixelY[5]",
 					"strict" : false
 				},
 				{
-					"name" : "TileType[1]",
+					"name" : "pixelY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelY[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pixelX[8]",
 					"strict" : false
 				}
 			]

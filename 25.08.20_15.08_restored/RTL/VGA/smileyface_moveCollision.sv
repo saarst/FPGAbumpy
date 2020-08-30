@@ -47,7 +47,7 @@ parameter int INITIAL_Y = 428;
 parameter int Y_ACCEL = 3; 
 parameter int sideSpeedX = 72;
 parameter int jumpSpeedYstep = 100;
-//parameter int jumpSpeedYUp = 200      ; */ 
+//parameter int jumpSpeedYUp = 200; */ 
 logic flag,newFlag;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
@@ -122,7 +122,9 @@ always_comb begin
 				
 				else if (HitEdgeCode [2])   // hit top border of brick  
 				if (Yspeed > 0) // while moving up
+					if (Yspeed <170)
 						YnxtSpeedNew = -Yspeed ; 
+					else  YnxtSpeedNew = -170;
 	end 
 	
 		

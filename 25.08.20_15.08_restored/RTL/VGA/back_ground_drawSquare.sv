@@ -18,7 +18,7 @@ module	back_ground_drawSquare	(
 
 const int	xFrameSize	=	639;
 const int	yFrameSize	=	479;
-const int	bracketOffset =	1;
+const int	bracketOffset =	3;
 
 logic [2:0] redBits;
 logic [2:0] greenBits;
@@ -45,14 +45,16 @@ begin
 		boardersDrawReq <= 	1'b0 ; 
 
 	
-	/*				
-	// draw the yellow borders 
+					
+	 //draw the yellow borders 
+	 /*
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 
 				redBits <= DARK_COLOR ;	
 				greenBits <= DARK_COLOR ;	
 				blueBits <= LIGHT_COLOR ;	// 3rd bit will be truncked
-			end*/
+			end
+			*/
 		// draw  four lines with "bracketOffset" offset from the border 
 		
 		if (        pixelX == bracketOffset ||

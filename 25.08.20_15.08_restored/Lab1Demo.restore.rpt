@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Sat Aug 29 23:20:18 2020
+Sun Aug 30 21:22:48 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Aug 29 23:20:18 2020 ;
+; Restore Archived Project Status ; Successful - Sun Aug 30 21:22:48 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
-; Top-level Entity Name           ; game_controller                       ;
+; Top-level Entity Name           ; tile_array                            ;
 ; Family                          ; Cyclone V                             ;
 +---------------------------------+---------------------------------------+
 
@@ -47,13 +47,13 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_29_08_20_23_17.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_30_08_20_20_00.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4740 megabytes
-    Info: Processing ended: Sat Aug 29 23:20:18 2020
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4741 megabytes
+    Info: Processing ended: Sun Aug 30 21:22:48 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -146,6 +146,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; output_files/stp1.stp                                 ;
 ; tile_array.vwf                                        ;
 ; tile_object.vwf                                       ;
+; tilearrayAsMemoryWrite.vwf                            ;
 ; tilemap.vwf                                           ;
 +-------------------------------------------------------+
 
