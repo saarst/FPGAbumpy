@@ -57,13 +57,24 @@ begin
 	
 	//floor drawing
 	if (Tile_type!= TILETYPE_BACKGROUND &&
-	(offsetY>60) &&
+	(offsetY>63) &&
 	(offsetY <75) &&
 	(offsetX >10) &&
 	(offsetX < 70)
 	) 
 	begin
 			RGBoutNew = FLOOR_ENCODING;
+			drawingType = TILETYPE_BACKGROUND ;
+			drawingRequest = YES_DRAWING ;
+	end
+	else	if (Tile_type!= TILETYPE_BACKGROUND &&   // cheat look good
+	(offsetY>60) &&
+	(offsetY <=63) &&
+	(offsetX >10) &&
+	(offsetX < 70)
+	) 
+	begin
+			RGBoutNew = 8'hE4;
 			drawingType = TILETYPE_BACKGROUND ;
 			drawingRequest = YES_DRAWING ;
 	end

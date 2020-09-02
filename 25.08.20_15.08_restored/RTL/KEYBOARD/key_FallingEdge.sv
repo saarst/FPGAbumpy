@@ -24,11 +24,11 @@ module key_FallingEdge
 			if (!resetN) begin 
 				keyIsPressed_d <= 0  ; 
 				keyIsPressed  <= 0 ; 
-				counter <= 4'h0;
+				counter <= 5'h00000;
 	 
 			end
 			
-			else if (counter == 4'hF )  begin
+			else if (counter == 5'b11111 )  begin
 				counter <= counter +1;
 				keyIsPressed_d  <= keyIsPressed; // generate a delay of one frame
 				if (!keyN)    keyIsPressed <= 1'b1 ; 

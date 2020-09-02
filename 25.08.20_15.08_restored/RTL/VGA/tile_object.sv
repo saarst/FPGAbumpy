@@ -6,8 +6,9 @@ module	tile_object	(
 					input		logic	resetN,
 					//Write to tile array
 					input 	logic writeEn,
-					input 	logic	[10:0] TargetX, 
-					input 	logic	[10:0] TargetY,
+					//input 	logic	[10:0] TargetX,
+					//input 	logic	[10:0] TargetY,
+					input 	logic StartOfFrame,
 					input 	logic	[1:0] Write_Tile_type, //tile type to write to array
 
 					input 	logic	[10:0] pixelX,// current VGA pixel 
@@ -15,7 +16,8 @@ module	tile_object	(
 					
 					output 	logic	[10:0] offsetX,// offset inside bracket from top left position 
 					output 	logic	[10:0] offsetY,
-					output   logic [1:0]  Tile_type
+					output   logic [1:0]  Tile_type,
+					output	logic gift_clear
 );
  
 logic	[10:0] Xnum;
@@ -27,15 +29,16 @@ assign Xnum = (pixelX / 80);
 assign Ynum = (pixelY / 80);
 
 tile_array Tile (	.clk(clk),
-						.TargetX(TargetX),
-						.TargetY(TargetY),
+						//.TargetX(TargetX),
+						//.TargetY(TargetY),
 						.resetN(resetN),
 						.StartOfFrame(StartOfFrame),
 						.information(2'b01),
 						.writeEn(writeEn),
 						.Xnum(Xnum[2:0]),
 						.Ynum(Ynum[2:0]),
-						.Tile_Type(tile) 
+						.Tile_Type(tile),
+						.gift_clear(gift_clear)
 						);
 
 

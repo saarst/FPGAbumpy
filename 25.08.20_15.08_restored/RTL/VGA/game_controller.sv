@@ -10,7 +10,7 @@ module	game_controller	(
 			input	logic	drawing_request_Tile, //tile
 			input	logic	drawing_request_Border, //tile
 			input   logic [1:0] TileType, 
-			input	logic [5:0]	numOfGifts, //tile
+			input logic gift_clear,
 
 		
 			

@@ -55,7 +55,7 @@ module  a1_lpm_constant_ooa
 	( 
 	.data_write(wire_mgl_prim1_data_write));
 	defparam
-		mgl_prim1.cvalue = 32'h200,
+		mgl_prim1.cvalue = 32'd450,
 		mgl_prim1.is_data_in_ram = 0,
 		mgl_prim1.is_readable = 0,
 		mgl_prim1.node_name = 1630601216,

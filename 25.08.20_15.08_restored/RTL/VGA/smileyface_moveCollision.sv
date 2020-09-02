@@ -45,7 +45,7 @@ parameter int INITIAL_Y_SPEED = 0;
 parameter int INITIAL_X = 24;
 parameter int INITIAL_Y = 428;
 parameter int Y_ACCEL = 3; 
-parameter int sideSpeedX = 72;
+parameter int sideSpeedX = 76;
 parameter int jumpSpeedYstep = 100;
 //parameter int jumpSpeedYUp = 200; */ 
 logic flag,newFlag;
@@ -60,6 +60,8 @@ const int	FIXED_POINT_MULTIPLIER	=	64;
 
 int Xspeed, topLeftX_FixedPoint,XnxtSpeed,XnxtSpeedNew; // local parameters 
 int Yspeed, topLeftY_FixedPoint,YnxtSpeed,YnxtSpeedNew;
+logic validY;
+assign validY = ((topLeftY==28) || (topLeftY==108) || (topLeftY==188) || (topLeftY==268) || (topLeftY==348) || (topLeftY==428));
 
 
 //////////--------------------------------------------------------------------------------------------------------------=
@@ -91,33 +93,38 @@ end
 
 
 always_comb begin
-		if (Yspeed > -176) YnxtSpeedNew = Yspeed - Y_ACCEL;
+		if ((Yspeed > -176) /*&& (Yspeed < 197)*/) YnxtSpeedNew = Yspeed - Y_ACCEL;
 		else YnxtSpeedNew = Yspeed;
 		XnxtSpeedNew = Xspeed;
 		newFlag = flag;
 	
-	if((Xspeed==ZERO) && (Yspeed==ZERO) && (!jumpN)) begin
+	if((Xspeed==ZERO) && (!jumpN) && (collision) && (HitEdgeCode[0]) ) begin
 					newFlag = 1'b1;
 					YnxtSpeedNew	= jumpSpeedYUp;
 	end
 	
-	else if ((!rightN) && (Xspeed==ZERO))  begin
+	else if ((!rightN) && (Xspeed==ZERO) && ( ((collision) && (HitEdgeCode[0])) || (Yspeed == jumpSpeedYUp)) )  begin
 			newFlag = 1'b1;
-			XnxtSpeedNew	= 		Xspeed + sideSpeedX;
+			XnxtSpeedNew	=  sideSpeedX;
 			YnxtSpeedNew	= jumpSpeedYstep;
 	end
 	
-	else if ((!leftN) && (Xspeed==ZERO)) begin
+	else if ((!leftN) && (Xspeed==ZERO) && ( ((collision) && (HitEdgeCode[0])) || (Yspeed == jumpSpeedYUp)) ) begin
 			newFlag = 1'b1;
-			XnxtSpeedNew	= Xspeed - sideSpeedX;
+			XnxtSpeedNew	=  - sideSpeedX;
 			YnxtSpeedNew	= jumpSpeedYstep;
 	end
+	
+	else if (( (Xspeed == sideSpeedX) || (Xspeed == -sideSpeedX)) && (Yspeed < (-jumpSpeedYstep) ))
+			XnxtSpeedNew = ZERO;
 	
 	else if (collision) begin
 				newFlag = 1'b1;	
 				if(HitEdgeCode[0]) begin //Bottom
 					XnxtSpeedNew = ZERO;
-					YnxtSpeedNew = ZERO;		
+					//if (Yspeed < 0) YnxtSpeedNew = ZERO;
+					//else
+						YnxtSpeedNew = 100;
 				end 
 				
 				else if (HitEdgeCode [2])   // hit top border of brick  
