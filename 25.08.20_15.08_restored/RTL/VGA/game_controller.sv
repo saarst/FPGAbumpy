@@ -9,16 +9,18 @@ module	game_controller	(
 			input	logic	drawing_request_Ball, //bumpy
 			input	logic	drawing_request_Tile, //tile
 			input	logic	drawing_request_Border, //tile
-			input   logic [1:0] TileType, 
-			input logic gift_clear,
+			input logic [1:0] TileType, 
+			input logic gift_clear, //no gifts remaining
+			input	logic	 HitEdgeCode0, //one bit per edge 
 
 		
 			
 			output logic collision, // active in case of collision between two objects
 			output logic SingleHitPulse, // critical code, generating A single pulse in a frame 
-			output logic endgame,
+			output logic EndGame,
 			output logic victory,
-			output logic WriteEn
+			output logic Loss,
+			output logic Remove_Gift
 );
 
 //Tile Types codes
@@ -28,7 +30,10 @@ localparam  logic [1:0] TILETYPE_GIFT = 2'b10;
 localparam  logic [1:0] TILETYPE_HOLE = 2'b11;
 
 assign collision =  (drawing_request_Ball &&  ( (drawing_request_Tile && TileType == TILETYPE_FLOOR)  || drawing_request_Border) ) ;
-assign WriteEn =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_GIFT) ) ;
+assign Remove_Gift =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_GIFT) ) ;
+assign victory =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_HOLE) ) ;
+assign Loss = (drawing_request_Ball &&  drawing_request_Border && (HitEdgeCode0 == 1'b1) ) ;
+assign EndGame = victory || Loss;
 
 logic flag ; // a semaphore to set the output only once per frame / regardless of the number of collisions 
 logic showHole ;
@@ -44,8 +49,6 @@ begin
 	end 
 	else begin 
 			
-			endgame = 1'b0 ;
-			victory = 1'b0 ;
 						
 			SingleHitPulse <= 1'b0 ; // default 
 			if(startOfFrame) 
@@ -53,11 +56,6 @@ begin
 			if ( collision  && (flag == 1'b0)) begin 
 				flag	<= 1'b1; // to enter only once 
 				SingleHitPulse <= 1'b1 ;
-				if(TileType == TILETYPE_HOLE)
-					begin
-						endgame = 1'b1 ;
-						victory = 1'b1 ;
-					end
 			end  
 	end 
 end

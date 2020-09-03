@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Wed Sep 02 16:09:00 2020
+Thu Sep 03 12:00:21 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Wed Sep 02 16:09:00 2020 ;
+; Restore Archived Project Status ; Successful - Thu Sep 03 12:00:21 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
 ; Top-level Entity Name           ; top_project_demo                      ;
 ; Family                          ; Cyclone V                             ;
@@ -47,14 +47,14 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_01_09_20_16_07.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_03_09_20_11_52.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4744 megabytes
-    Info: Processing ended: Wed Sep 02 16:09:00 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4741 megabytes
+    Info: Processing ended: Thu Sep 03 12:00:21 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +-------------------------------------------------------+
@@ -106,6 +106,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; Waveform.vwf                                          ;
 ; Waveform1.vwf                                         ;
 ; Waveform2.vwf                                         ;
+; Waveform3.vwf                                         ;
 ; a1.bsf                                                ;
 ; a1.qip                                                ;
 ; a1.v                                                  ;

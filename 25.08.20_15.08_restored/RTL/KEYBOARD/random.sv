@@ -8,9 +8,9 @@ module random
 
   //generating a random number by latching a fast counter with the rising edge of an input ( e.g. key pressed )
   
-parameter SIZE_BITS = 8;
+parameter SIZE_BITS = 2;
 parameter MIN_VAL = 0;  //set the min and max values 
-parameter MAX_VAL = 479;
+parameter MAX_VAL = 2;
 
 	logic [SIZE_BITS-1:0] counter;
 	logic rise_d;

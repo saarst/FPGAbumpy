@@ -52,8 +52,50 @@ r1
 R9
 R10
 nback_ground_draw@square_vlg_vec_tst
+vgame_controller
+Z12 !s110 1599124191
+!i10b 1
+!s100 iceAbU_K7M^CA1SMgfO7[1
+I=PH<0MgB0;3HQ;Q^hW[nM0
+R2
+R0
+w1599124189
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1599124190.000000
+R7
+R8
+!i113 1
+R9
+R10
+vgame_controller_vlg_vec_tst
+R12
+!i10b 1
+!s100 TPEC<aKgSQRnMN4VDAi?o1
+IU@Pe3mOab:z0FM1e2ENnP3
+R2
+R0
+w1599124187
+8Waveform6.vwf.vt
+FWaveform6.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+!s108 1599124191.000000
+!s107 Waveform6.vwf.vt|
+!s90 -work|work|Waveform6.vwf.vt|
+!i113 1
+R9
+R10
 vsmileyface_moveCollision
-Z12 !s110 1598547280
+Z13 !s110 1598547280
 !i10b 1
 !s100 [cFT:5JiOM0JIMLh0fDc:1
 IbbQk[:HU]=ZdT>n^YV2E73
@@ -75,7 +117,7 @@ R9
 R10
 nsmileyface_move@collision
 vsmileyface_moveCollision_vlg_vec_tst
-R12
+R13
 !i10b 1
 !s100 W98TBOcGe`?eCDL2z:`JW0
 Imhjbb^VabJWmX4LPlfH]X1
@@ -97,7 +139,7 @@ R9
 R10
 nsmileyface_move@collision_vlg_vec_tst
 vsquare_object
-Z13 !s110 1598363070
+Z14 !s110 1598363070
 !i10b 1
 !s100 6J7EFWD47Bh67Voh@g2I93
 IRL0@=TAE;]03QZb4zb3Km1
@@ -118,7 +160,7 @@ R8
 R9
 R10
 vsquare_object_vlg_vec_tst
-R13
+R14
 !i10b 1
 !s100 dDNVd76YT4NCWJ8QzRdCV2
 Iz7^^b=H4D6O[ce1TlN7GV2
