@@ -9,7 +9,7 @@
 //maybe add state machine for on ground/jumping/falling
 //
 
-module	smileyface_moveCollision	(	
+module	Bumpy_moveCollision	(	
  
 					input	logic	clk,
 					input	logic	resetN,
@@ -21,13 +21,14 @@ module	smileyface_moveCollision	(
 					input	logic	[3:0] HitEdgeCode, //one bit per edge 
 					input logic EndGame,
 
-					//debugging input
+					/*//debugging input
 					input	logic [31:0] Y_ACCEL,
 					input	logic [31:0] sideSpeedX,
 					input	logic [31:0] jumpSpeedYstep,
 					input logic [31:0] jumpSpeedYUp,
 					input logic [31:0] Y_SPEED_LOWER_LIMIT,
 					input logic [31:0] Y_SPEED_UPPER_LIMIT,
+					*/
 					
 					
 
@@ -46,10 +47,14 @@ parameter int INITIAL_X_SPEED = 0;
 parameter int INITIAL_Y_SPEED = 0;
 
  
-//parameter int Y_ACCEL = 3; 
-//parameter int sideSpeedX = 76;
-//parameter int jumpSpeedYstep = 100;
-//parameter int jumpSpeedYUp = 200; */ 
+parameter int Y_ACCEL = 3;//3 
+parameter int sideSpeedX =74; //76;
+parameter int jumpSpeedYstep = 100;//100;
+parameter int jumpSpeedYUp = 200; 
+parameter int Y_SPEED_LOWER_LIMIT = 170;//170;
+parameter int Y_SPEED_UPPER_LIMIT = 170;//170;
+
+
 logic flag,newFlag;
 
 int INITIAL_X; //= 24; old default

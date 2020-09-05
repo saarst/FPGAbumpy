@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Thu Sep 03 12:00:21 2020
+Sat Sep 05 16:20:04 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu Sep 03 12:00:21 2020 ;
+; Restore Archived Project Status ; Successful - Sat Sep 05 16:20:04 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
 ; Top-level Entity Name           ; top_project_demo                      ;
 ; Family                          ; Cyclone V                             ;
@@ -47,12 +47,12 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_03_09_20_11_52.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_05_09_20_16_17.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4741 megabytes
-    Info: Processing ended: Thu Sep 03 12:00:21 2020
+    Info: Peak virtual memory: 4744 megabytes
+    Info: Processing ended: Sat Sep 05 16:20:04 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -79,6 +79,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/MSS/data_conversion.sv                            ;
 ; RTL/MSS/prescaler.sv                                  ;
 ; RTL/Seg7/SEG7.SV                                      ;
+; RTL/VGA/Bumpy_moveCollision.sv                        ;
 ; RTL/VGA/NumbersBitMap.sv                              ;
 ; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                 ;
 ; RTL/VGA/TileMap.sv                                    ;
@@ -105,8 +106,6 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/numberPosition_bb.v                               ;
 ; Waveform.vwf                                          ;
 ; Waveform1.vwf                                         ;
-; Waveform2.vwf                                         ;
-; Waveform3.vwf                                         ;
 ; a1.bsf                                                ;
 ; a1.qip                                                ;
 ; a1.v                                                  ;
@@ -136,19 +135,12 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; constraints/pin.tcl                                   ;
 ; db/Lab1Demo.cmp.rdb                                   ;
 ; db/stp1_auto_stripped.stp                             ;
-; key_FallingEdge.vwf                                   ;
-; key_risingEdge.vwf                                    ;
-; keys_not_working_smiley.vwf                           ;
 ; numberPos.bsf                                         ;
 ; numberPos.qip                                         ;
 ; numberPos.v                                           ;
 ; numberPos_bb.v                                        ;
 ; output_files/Chain1.cdf                               ;
 ; output_files/stp1.stp                                 ;
-; tile_array.vwf                                        ;
-; tile_object.vwf                                       ;
-; tilearrayAsMemoryWrite.vwf                            ;
-; tilemap.vwf                                           ;
 +-------------------------------------------------------+
 
 

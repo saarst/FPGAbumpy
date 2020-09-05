@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY game_controller
+set_global_assignment -name TOP_LEVEL_ENTITY top_project_demo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:51:54  JULY 08, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -659,61 +659,6 @@ set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "smileyface_moveCollision:inst3|rightN" -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "smileyface_moveCollision:inst3|leftN" -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "smileyface_moveCollision:inst3|rightN" -section_id auto_signaltap_0
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/TileMap.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/back_ground_drawSquare.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyface_moveCollision.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/game_controller.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/objects_mux_all.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/square_object.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyBitMap.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/objects_mux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/VGA_Controller.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/NumbersBitMap.sv
-set_global_assignment -name TCL_SCRIPT_FILE constraints/pin.tcl
-set_global_assignment -name SDC_FILE constraints/DE10_Standard_Audio.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/ToneDecoder.sv
-set_global_assignment -name BDF_FILE RTL/MSS/TOP_MSS_DEMO.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/SinTable.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/prescaler.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/data_conversion.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/addr_counter.sv
-set_global_assignment -name QXP_FILE RTL/audio_codec_controller/audio_codec_controller.qxp
-set_global_assignment -name BDF_FILE RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/random.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/keyToggle_decoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/keyPad_decoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/Seg7/SEG7.SV
-set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_global_assignment -name QIP_FILE RTL/VGA/valX.qip
-set_global_assignment -name QIP_FILE RTL/numberPosition.qip
-set_global_assignment -name BDF_FILE RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf
-set_global_assignment -name QIP_FILE numberPos.qip
-set_global_assignment -name BDF_FILE RTL/VGA/top_project_demo.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/tile_array.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/tile_object.sv
-set_global_assignment -name SOURCE_FILE db/Lab1Demo.cmp.rdb
-set_global_assignment -name VECTOR_WAVEFORM_FILE tilemap.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE tile_object.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE tile_array.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE keys_not_working_smiley.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/key_risingEdge.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE key_risingEdge.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/key_FallingEdge.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE key_FallingEdge.vwf
-set_global_assignment -name QIP_FILE const_need.qip
-set_global_assignment -name QIP_FILE a1.qip
-set_global_assignment -name QIP_FILE a2.qip
-set_global_assignment -name QIP_FILE a3.qip
-set_global_assignment -name QIP_FILE a4.qip
-set_global_assignment -name QIP_FILE a5.qip
-set_global_assignment -name VECTOR_WAVEFORM_FILE tilearrayAsMemoryWrite.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK
@@ -770,6 +715,52 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/TileMap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/back_ground_drawSquare.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyface_moveCollision.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/game_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/objects_mux_all.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/square_object.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyBitMap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/objects_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/VGA_Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/NumbersBitMap.sv
+set_global_assignment -name TCL_SCRIPT_FILE constraints/pin.tcl
+set_global_assignment -name SDC_FILE constraints/DE10_Standard_Audio.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/ToneDecoder.sv
+set_global_assignment -name BDF_FILE RTL/MSS/TOP_MSS_DEMO.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/SinTable.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/prescaler.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/data_conversion.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/MSS/addr_counter.sv
+set_global_assignment -name QXP_FILE RTL/audio_codec_controller/audio_codec_controller.qxp
+set_global_assignment -name BDF_FILE RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/random.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/keyToggle_decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/keyPad_decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/Seg7/SEG7.SV
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name QIP_FILE RTL/VGA/valX.qip
+set_global_assignment -name QIP_FILE RTL/numberPosition.qip
+set_global_assignment -name BDF_FILE RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf
+set_global_assignment -name QIP_FILE numberPos.qip
+set_global_assignment -name BDF_FILE RTL/VGA/top_project_demo.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/tile_array.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/tile_object.sv
+set_global_assignment -name SOURCE_FILE db/Lab1Demo.cmp.rdb
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/key_risingEdge.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/key_FallingEdge.sv
+set_global_assignment -name QIP_FILE const_need.qip
+set_global_assignment -name QIP_FILE a1.qip
+set_global_assignment -name QIP_FILE a2.qip
+set_global_assignment -name QIP_FILE a3.qip
+set_global_assignment -name QIP_FILE a4.qip
+set_global_assignment -name QIP_FILE a5.qip
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/Bumpy_moveCollision.sv
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

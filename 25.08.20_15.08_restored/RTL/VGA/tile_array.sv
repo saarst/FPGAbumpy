@@ -70,7 +70,7 @@ localparam bit [0:5] [0:7] [0:1] map0  = {
 		2'b00:	tile_bitmap <= map0 ;
 		2'b01:	tile_bitmap <= map1 ;
 		2'b10:	tile_bitmap <= map2 ;
-	default : tile_bitmap <= map0 ;
+	default : 	tile_bitmap <= map0 ;
 	endcase
 	end
 

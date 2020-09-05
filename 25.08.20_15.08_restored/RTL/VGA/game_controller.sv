@@ -11,7 +11,7 @@ module	game_controller	(
 			input	logic	drawing_request_Border, //tile
 			input logic [1:0] TileType, 
 			input logic gift_clear, //no gifts remaining
-			input	logic	 HitEdgeCode0, //one bit per edge 
+			input	logic	[3:0] HitEdgeCode , //one bit per edge 
 
 		
 			
@@ -32,7 +32,7 @@ localparam  logic [1:0] TILETYPE_HOLE = 2'b11;
 assign collision =  (drawing_request_Ball &&  ( (drawing_request_Tile && TileType == TILETYPE_FLOOR)  || drawing_request_Border) ) ;
 assign Remove_Gift =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_GIFT) ) ;
 assign victory =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_HOLE) ) ;
-assign Loss = (drawing_request_Ball &&  drawing_request_Border && (HitEdgeCode0 == 1'b1) ) ;
+assign Loss = (drawing_request_Ball &&  drawing_request_Border && (HitEdgeCode == 4'b0001) ) ;
 assign EndGame = victory || Loss;
 
 logic flag ; // a semaphore to set the output only once per frame / regardless of the number of collisions 

@@ -4,55 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "collision",
+					"name" : "Tile_Type[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SingleHitPulse",
+					"name" : "Tile_Type[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gift_clear",
+					"strict" : false
+				},
+				{
+					"name" : "Ynum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Xnum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Xnum[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Xnum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ynum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ynum[2]",
+					"strict" : false
+				},
+				{
+					"name" : "information[0]",
 					"strict" : false
 				},
 				{
 					"name" : "EndGame",
-					"strict" : false
-				},
-				{
-					"name" : "victory",
-					"strict" : false
-				},
-				{
-					"name" : "Loss",
-					"strict" : false
-				},
-				{
-					"name" : "Remove_Gift",
-					"strict" : false
-				},
-				{
-					"name" : "TileType[1]",
-					"strict" : false
-				},
-				{
-					"name" : "TileType[0]",
-					"strict" : false
-				},
-				{
-					"name" : "drawing_request_Ball",
-					"strict" : false
-				},
-				{
-					"name" : "drawing_request_Tile",
-					"strict" : false
-				},
-				{
-					"name" : "drawing_request_Border",
-					"strict" : false
-				},
-				{
-					"name" : "HitEdgeCode[0]",
-					"strict" : false
-				},
-				{
-					"name" : "startOfFrame",
 					"strict" : false
 				},
 				{
@@ -61,6 +53,22 @@
 				},
 				{
 					"name" : "resetN",
+					"strict" : false
+				},
+				{
+					"name" : "writeEn",
+					"strict" : false
+				},
+				{
+					"name" : "rndTest[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rndTest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "information[1]",
 					"strict" : false
 				}
 			]
