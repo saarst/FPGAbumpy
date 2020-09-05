@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Sep 03 12:33:26 2020
+Analysis & Synthesis Status : Successful - Sat Sep 05 18:25:48 2020
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
-Top-level Entity Name : tile_array
+Top-level Entity Name : Bumpy_moveCollision
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 3163
-Total pins : 17
+Total registers : 3266
+Total pins : 35
 Total virtual pins : 0
 Total block memory bits : 446,464
 Total DSP Blocks : 0

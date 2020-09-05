@@ -15,7 +15,6 @@ module	TileMap	(
 					input logic [1:0]	 Tile_type, 
 
 					output	logic drawingRequest, //output that the pixel should be dispalyed
-					output	logic [1:0]	drawingType,	//Current pixel type 00 Transparent 01 Floor 11 Gift 10 Hole 
 					output	logic	[7:0] RGBout  //rgb value from the bitmap 
  ) ;
 
@@ -26,12 +25,12 @@ logic	[7:0] RGBoutNew;
 localparam  logic NO_DRAWING = 1'b0;
 localparam  logic YES_DRAWING = 1'b1;
 
-
 //Tile Types codes
 localparam  logic [1:0] TILETYPE_BACKGROUND = 2'b00;
 localparam  logic [1:0] TILETYPE_FLOOR = 2'b01;
 localparam  logic [1:0] TILETYPE_GIFT = 2'b10;
 localparam  logic [1:0] TILETYPE_HOLE = 2'b11;
+
 
 //Tile Types colors
 localparam logic [7:0] TRANSPARENT_ENCODING = 8'hFF ;// RGB value in the bitmap representing a transparent pixel 
@@ -64,7 +63,6 @@ begin
 	) 
 	begin
 			RGBoutNew = FLOOR_ENCODING;
-			drawingType = TILETYPE_BACKGROUND ;
 			drawingRequest = YES_DRAWING ;
 	end
 	else	if (Tile_type!= TILETYPE_BACKGROUND &&   // cheat look good
@@ -74,10 +72,23 @@ begin
 	(offsetX < 70)
 	) 
 	begin
-			RGBoutNew = 8'hE4;
-			drawingType = TILETYPE_BACKGROUND ;
+			RGBoutNew = TRANSPARENT_ENCODING;
 			drawingRequest = YES_DRAWING ;
+			
 	end
+	
+		else	if (Tile_type == TILETYPE_BACKGROUND &&   // cheat look good
+	(offsetY==62) &&
+	(offsetX >10) &&
+	(offsetX < 70)
+	) 
+	begin
+			RGBoutNew = TRANSPARENT_ENCODING;
+			drawingRequest = YES_DRAWING ;
+			
+	end
+	
+	
 	else 
 		begin  
 			case (Tile_type)
@@ -87,14 +98,12 @@ begin
 					if (  (offsetY<40) && (offsetY>20) && (offsetX<40) && (offsetX>20) ) 
 							begin
 							RGBoutNew = GIFT_ENCODING;
-							drawingType = TILETYPE_GIFT ;
 							drawingRequest = YES_DRAWING ;
 							end
 					else
 						begin
-							RGBoutNew = TRANSPARENT_ENCODING ; //default is transparent
-							drawingType = TILETYPE_BACKGROUND ; 
-							drawingRequest = YES_DRAWING ;
+							RGBoutNew = TRANSPARENT_ENCODING ; //default is transparent 
+							drawingRequest = NO_DRAWING ;
 						end
 				end
 				
@@ -102,20 +111,18 @@ begin
 					if (  (offsetY<40) && (offsetY>20) && (offsetX<40) && (offsetX>20) ) 
 							begin
 							RGBoutNew = HOLE_ENCODING;
-							drawingType = TILETYPE_HOLE ;
 							drawingRequest = YES_DRAWING ;
 							end
 					else
 						begin
 							RGBoutNew = TRANSPARENT_ENCODING ; //default is transparent
-							drawingType = TILETYPE_BACKGROUND ; 
 							drawingRequest = NO_DRAWING ;
 						end
+						
 					
 				end
 				default: begin
-					RGBoutNew = TRANSPARENT_ENCODING ; //default is transparent
-					drawingType = TILETYPE_BACKGROUND ; 
+					RGBoutNew = TRANSPARENT_ENCODING ; //default is transparent 
 					drawingRequest = NO_DRAWING ;
 				end
 			endcase

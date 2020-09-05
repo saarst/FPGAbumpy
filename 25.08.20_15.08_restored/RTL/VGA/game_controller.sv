@@ -16,6 +16,7 @@ module	game_controller	(
 		
 			
 			output logic collision, // active in case of collision between two objects
+			output logic jumpCollision, // active in case where side movement is enabled
 			output logic SingleHitPulse, // critical code, generating A single pulse in a frame 
 			output logic EndGame,
 			output logic victory,
@@ -29,7 +30,8 @@ localparam  logic [1:0] TILETYPE_FLOOR = 2'b01;
 localparam  logic [1:0] TILETYPE_GIFT = 2'b10;
 localparam  logic [1:0] TILETYPE_HOLE = 2'b11;
 
-assign collision =  (drawing_request_Ball &&  ( (drawing_request_Tile && TileType == TILETYPE_FLOOR)  || drawing_request_Border) ) ;
+assign collision =  (drawing_request_Ball &&  ( (drawing_request_Tile && (TileType == TILETYPE_FLOOR))  || drawing_request_Border) ) ;
+assign jumpCollision =  (drawing_request_Ball && (drawing_request_Tile && (TileType == TILETYPE_BACKGROUND)) ) ; //used for jumping intervals
 assign Remove_Gift =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_GIFT) ) ;
 assign victory =  (drawing_request_Ball &&  drawing_request_Tile && (TileType == TILETYPE_HOLE) ) ;
 assign Loss = (drawing_request_Ball &&  drawing_request_Border && (HitEdgeCode == 4'b0001) ) ;

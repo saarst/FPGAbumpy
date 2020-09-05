@@ -763,4 +763,5 @@ set_global_assignment -name QIP_FILE a3.qip
 set_global_assignment -name QIP_FILE a4.qip
 set_global_assignment -name QIP_FILE a5.qip
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/Bumpy_moveCollision.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/digits_to_numberbit.sv
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

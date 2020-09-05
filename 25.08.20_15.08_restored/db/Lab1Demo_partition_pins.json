@@ -4,51 +4,91 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Tile_Type[0]",
+					"name" : "topLeftX[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Tile_Type[1]",
+					"name" : "topLeftX[1]",
 					"strict" : false
 				},
 				{
-					"name" : "gift_clear",
+					"name" : "topLeftX[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Ynum[0]",
+					"name" : "topLeftX[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Xnum[1]",
+					"name" : "topLeftX[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Xnum[2]",
+					"name" : "topLeftX[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Xnum[0]",
+					"name" : "topLeftX[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Ynum[1]",
+					"name" : "topLeftX[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Ynum[2]",
+					"name" : "topLeftX[8]",
 					"strict" : false
 				},
 				{
-					"name" : "information[0]",
+					"name" : "topLeftX[9]",
 					"strict" : false
 				},
 				{
-					"name" : "EndGame",
+					"name" : "topLeftX[10]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "topLeftY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[7]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[8]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[9]",
+					"strict" : false
+				},
+				{
+					"name" : "topLeftY[10]",
 					"strict" : false
 				},
 				{
@@ -56,19 +96,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "writeEn",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "rndTest[0]",
+					"name" : "startOfFrame",
 					"strict" : false
 				},
 				{
-					"name" : "rndTest[1]",
+					"name" : "EndGame",
 					"strict" : false
 				},
 				{
-					"name" : "information[1]",
+					"name" : "collision",
+					"strict" : false
+				},
+				{
+					"name" : "HitEdgeCode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rightN",
+					"strict" : false
+				},
+				{
+					"name" : "jumpCollision",
+					"strict" : false
+				},
+				{
+					"name" : "HitEdgeCode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HitEdgeCode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HitEdgeCode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leftN",
+					"strict" : false
+				},
+				{
+					"name" : "jumpN",
 					"strict" : false
 				}
 			]

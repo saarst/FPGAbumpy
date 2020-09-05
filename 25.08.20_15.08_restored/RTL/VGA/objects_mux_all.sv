@@ -42,7 +42,7 @@ begin
 	else begin
 		if (smileyDrawingRequest == 1'b1 )   
 			tmpRGB <= smileyRGB;  //first priority 
-		else if (boxDrawingRequest == 1'b1)
+		else if (boxDrawingRequest == 1'b1 && (box_RGB != 8'hFF) )
 			tmpRGB <= box_RGB;
 		//add code here
 		
