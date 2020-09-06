@@ -1,5 +1,5 @@
 Restore Archived Project report for Lab1Demo
-Sat Sep 05 19:04:45 2020
+Sun Sep 06 18:49:40 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Sep 05 19:04:45 2020 ;
+; Restore Archived Project Status ; Successful - Sun Sep 06 18:49:40 2020 ;
 ; Revision Name                   ; Lab1Demo                              ;
 ; Top-level Entity Name           ; top_project_demo                      ;
 ; Family                          ; Cyclone V                             ;
@@ -47,13 +47,13 @@ agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_05_09_20_19_03.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
+Info: Successfully restored 'C:/Projects/Lab1A/FPGAbumpy/project_06_09_20_18_48.qar' into the 'C:\\Projects\\Lab1A\\FPGAbumpy\\25.08.20_15.08_restored/' directory
 Info: Generated report 'Lab1Demo.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Sat Sep 05 19:04:45 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4744 megabytes
+    Info: Processing ended: Sun Sep 06 18:49:40 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -66,11 +66,16 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; DE10_Standard_Audio.sdc                               ;
 ; Lab1Demo.qpf                                          ;
 ; Lab1Demo.qsf                                          ;
+; RTL/Countdown/NumbersBitMap.sv                        ;
+; RTL/Countdown/countdown.sv                            ;
+; RTL/Countdown/counter_top.sv                          ;
+; RTL/Countdown/decimal_down_counter.sv                 ;
+; RTL/Countdown/digits_to_numberBit.sv                  ;
+; RTL/Countdown/one_sec_counter.sv                      ;
+; RTL/Countdown/six_down_counter.sv                     ;
 ; RTL/KEYBOARD/TOP_KBD_DEMOALL.bdf                      ;
 ; RTL/KEYBOARD/keyPad_decoder.sv                        ;
 ; RTL/KEYBOARD/keyToggle_decoder.sv                     ;
-; RTL/KEYBOARD/key_FallingEdge.sv                       ;
-; RTL/KEYBOARD/key_risingEdge.sv                        ;
 ; RTL/KEYBOARD/random.sv                                ;
 ; RTL/MSS/SinTable.sv                                   ;
 ; RTL/MSS/TOP_MSS_DEMO.bdf                              ;
@@ -80,12 +85,10 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/MSS/prescaler.sv                                  ;
 ; RTL/Seg7/SEG7.SV                                      ;
 ; RTL/VGA/Bumpy_moveCollision.sv                        ;
-; RTL/VGA/NumbersBitMap.sv                              ;
 ; RTL/VGA/TOP_VGA_DEMO_WITH_MSS_ALL.bdf                 ;
 ; RTL/VGA/TileMap.sv                                    ;
 ; RTL/VGA/VGA_Controller.sv                             ;
 ; RTL/VGA/back_ground_drawSquare.sv                     ;
-; RTL/VGA/digits_to_numberbit.sv                        ;
 ; RTL/VGA/game_controller.sv                            ;
 ; RTL/VGA/objects_mux.sv                                ;
 ; RTL/VGA/objects_mux_all.sv                            ;
@@ -105,8 +108,6 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/numberPosition.qip                                ;
 ; RTL/numberPosition.v                                  ;
 ; RTL/numberPosition_bb.v                               ;
-; Waveform.vwf                                          ;
-; Waveform1.vwf                                         ;
 ; a1.bsf                                                ;
 ; a1.qip                                                ;
 ; a1.v                                                  ;

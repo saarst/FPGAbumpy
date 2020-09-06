@@ -4,95 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "topLeftX[0]",
+					"name" : "Count_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[1]",
+					"name" : "Count_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[2]",
+					"name" : "Count_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[3]",
+					"name" : "Count_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[4]",
+					"name" : "Count_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[5]",
+					"name" : "Count_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[6]",
+					"name" : "Count_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[7]",
+					"name" : "Count_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[8]",
+					"name" : "Count_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[9]",
+					"name" : "Count_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftX[10]",
+					"name" : "Count_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftY[0]",
+					"name" : "Count_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftY[1]",
+					"name" : "tc",
 					"strict" : false
 				},
 				{
-					"name" : "topLeftY[2]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[4]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[5]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[6]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[7]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[8]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[9]",
-					"strict" : false
-				},
-				{
-					"name" : "topLeftY[10]",
-					"strict" : false
-				},
-				{
-					"name" : "resetN",
+					"name" : "load",
 					"strict" : false
 				},
 				{
@@ -100,47 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "startOfFrame",
+					"name" : "resetN",
 					"strict" : false
 				},
 				{
-					"name" : "EndGame",
-					"strict" : false
-				},
-				{
-					"name" : "collision",
-					"strict" : false
-				},
-				{
-					"name" : "HitEdgeCode[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rightN",
-					"strict" : false
-				},
-				{
-					"name" : "jumpCollision",
-					"strict" : false
-				},
-				{
-					"name" : "HitEdgeCode[3]",
-					"strict" : false
-				},
-				{
-					"name" : "HitEdgeCode[1]",
-					"strict" : false
-				},
-				{
-					"name" : "HitEdgeCode[2]",
-					"strict" : false
-				},
-				{
-					"name" : "leftN",
-					"strict" : false
-				},
-				{
-					"name" : "jumpN",
+					"name" : "ena",
 					"strict" : false
 				}
 			]

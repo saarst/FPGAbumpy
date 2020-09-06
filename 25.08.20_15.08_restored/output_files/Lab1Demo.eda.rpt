@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Lab1Demo
-Thu Sep 03 12:09:49 2020
+Sun Sep 06 18:26:28 2020
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Sep 03 12:09:49 2020 ;
+; EDA Netlist Writer Status ; Successful - Sun Sep 06 18:26:28 2020 ;
 ; Revision Name             ; Lab1Demo                              ;
-; Top-level Entity Name     ; game_controller                       ;
+; Top-level Entity Name     ; countdown                             ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -95,95 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Intel and sold by Intel or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Thu Sep 03 12:09:48 2020
+    Info: Processing started: Sun Sep 06 18:26:26 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/simulation/qsim/ Lab1Demo -c Lab1Demo
-Warning (20013): Ignored 80 assignments for entity "top_project_demo" -- entity does not exist in design
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACDAT was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACLRCK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_I2C_SCLK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_I2C_SDAT was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_XCK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50 was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MICROPHON_LED was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_BLANK_N was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[4] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[5] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[6] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[7] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_CLK was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[4] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[5] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[6] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[7] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[4] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[5] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7] was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tck was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to resetN was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -section_id Top was ignored
-    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -section_id Top was ignored
 Info (119006): Selected device 5CSXFC6D6F31C6 for design "Lab1Demo"
 Info (204019): Generated file Lab1Demo.vo in folder "C:/Projects/Lab1A/FPGAbumpy/25.08.20_15.08_restored/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 81 warnings
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4732 megabytes
-    Info: Processing ended: Thu Sep 03 12:09:49 2020
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun Sep 06 18:26:28 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -17,7 +17,6 @@ module	TileMap	(
 					output	logic drawingRequest, //output that the pixel should be dispalyed
 					output	logic	[7:0] RGBout  //rgb value from the bitmap 
  ) ;
-
  //Next pixel color
 logic	[7:0] RGBoutNew; 
 

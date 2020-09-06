@@ -56,7 +56,7 @@ parameter int Y_SPEED_LOWER_LIMIT = 170;//170;
 parameter int Y_SPEED_UPPER_LIMIT = 170;//170;
 
 
-logic flag,newFlag,landing;
+logic flag,newFlag,landing,nxtLandingNew,landingNew;
 
 int INITIAL_X; //= 24; old default
 int INITIAL_Y; //= 428;old default
@@ -118,6 +118,7 @@ begin
 		XnxtSpeed <= INITIAL_X_SPEED;
 		YnxtSpeed <= INITIAL_Y_SPEED;
 		flag      <= 1'b0;
+		landing 	 <= 1'b0;
 		
 	end
 	
@@ -125,12 +126,14 @@ begin
 		Xspeed 	 <= XnxtSpeed;
 		Yspeed 	 <= YnxtSpeed;
 		flag      <= 1'b0;
+		landing 	 <= landingNew;
 	end
 	
 	else if (!flag ) begin
 	XnxtSpeed <= XnxtSpeedNew;
 	YnxtSpeed <= YnxtSpeedNew;
 	flag <=newFlag;
+	landingNew <= nxtLandingNew;
 	end
 end
 
@@ -144,6 +147,7 @@ always_comb begin
 		
 		XnxtSpeedNew = Xspeed;
 		newFlag = flag;
+		nxtLandingNew   = ZERO;
 	
 	if((Xspeed==ZERO) && (!jumpN) && (collision) && (HitEdgeCode[0]) ) begin
 					newFlag = 1'b1;
@@ -172,6 +176,7 @@ always_comb begin
 				if(HitEdgeCode[0]) begin //Bottom 
 					XnxtSpeedNew = ZERO;
 					YnxtSpeedNew = jumpSpeedYstep;
+					nxtLandingNew   = 1'b1;
 				end 
 				
 				else if (HitEdgeCode [2] && Yspeed > 0 ) begin   //Top - hit top border of brick   while moving up 
@@ -208,14 +213,11 @@ begin
 	else
 	begin
 		
-		if(collision && HitEdgeCode[0]) landing <= 1'b1;
-		else landing <= 1'b0;
-		
 		if (startOfFrame) // perform  position integral only 30 times per second
 		begin  
 			if (landing) begin
-					topLeftY_FixedPoint  <= topLeftY_FixedPoint - (topLeftY_FixedPoint % TILE_WIDTH) + BUMPY_OFFSET;
-					topLeftX_FixedPoint  <= topLeftX_FixedPoint - (topLeftX_FixedPoint % TILE_WIDTH) + BUMPY_OFFSET;
+					topLeftY_FixedPoint  <= topLeftY_FixedPoint - Yspeed; 
+					topLeftX_FixedPoint  <= (topLeftX - (topLeftX % TILE_WIDTH) + BUMPY_OFFSET )* FIXED_POINT_MULTIPLIER  + Xspeed;
 					
 				end
 				else begin

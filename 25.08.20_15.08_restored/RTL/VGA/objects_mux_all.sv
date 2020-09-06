@@ -15,6 +15,10 @@ module	objects_mux_all	(
 					input 	logic boxDrawingRequest,
 					input 	logic [7:0] box_RGB,
 					
+		// timer
+					input 	logic timerDrawingRequest,
+					input		logic [7:0] timer_RGB,
+					
 					
 		// background 
 					input		logic	[7:0] backGroundRGB, 
@@ -40,7 +44,9 @@ begin
 			tmpRGB	<= 8'b0;
 	end
 	else begin
-		if (smileyDrawingRequest == 1'b1 )   
+		if (timerDrawingRequest) 
+			tmpRGB <= timer_RGB;
+		else if (smileyDrawingRequest == 1'b1 )   
 			tmpRGB <= smileyRGB;  //first priority 
 		else if (boxDrawingRequest == 1'b1 && (box_RGB != 8'hFF) )
 			tmpRGB <= box_RGB;

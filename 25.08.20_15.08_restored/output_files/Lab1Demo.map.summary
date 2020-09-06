@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Sep 05 18:25:48 2020
+Analysis & Synthesis Status : Successful - Sun Sep 06 18:25:05 2020
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
-Top-level Entity Name : Bumpy_moveCollision
+Top-level Entity Name : countdown
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 3266
-Total pins : 35
+Total registers : 3071
+Total pins : 17
 Total virtual pins : 0
 Total block memory bits : 446,464
 Total DSP Blocks : 0
